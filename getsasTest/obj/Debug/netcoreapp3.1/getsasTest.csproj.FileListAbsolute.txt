@@ -161,3 +161,4 @@ C:\Users\Administrador\source\repos\pcs2humanity\getsasTest\bin\Debug\netcoreapp
 C:\Users\Administrador\source\repos\pcs2humanity\getsasTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Administrador\source\repos\pcs2humanity\getsasTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Administrador\source\repos\pcs2humanity\getsasTest\bin\Debug\netcoreapp3.1\getsasTest.dll.config
+C:\Users\Administrador\source\repos\pcs2humanity\getsasTest\bin\Debug\netcoreapp3.1\testhost.exe
