@@ -14,16 +14,14 @@ namespace getsasTest
             var sas = new GetSas().Do();
 
             Assert.NotEmpty(sas);
-
         }
-        
+
         [Fact]
         public void GetSas_Do_is_a_SaS()
         {
             var sas = new GetSas().Do();
 
             Assert.Contains("?sv=", sas);
-
         }
 
         [Fact]
@@ -32,7 +30,7 @@ namespace getsasTest
             var sas = new GetSas().Do();
 
             Assert.Contains("&sp=rl", sas);
-
+             
         }
     }
 }

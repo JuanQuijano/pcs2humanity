@@ -12,6 +12,8 @@ namespace getsas
             var blobClient = storageAccount.CreateCloudBlobClient();
             var container = blobClient.GetContainerReference("images");
 
+
+
             SharedAccessBlobPolicy adHocPolicy = new SharedAccessBlobPolicy()
             {
 
@@ -19,10 +21,16 @@ namespace getsas
                 Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.List
             };
 
-
             var sas = container.GetSharedAccessSignature(adHocPolicy, "image");
 
             return sas;
         }
     }
 }
+
+
+
+
+
+
+
