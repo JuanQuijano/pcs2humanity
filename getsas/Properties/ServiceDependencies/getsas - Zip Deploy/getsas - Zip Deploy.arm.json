@@ -1,0 +1,227 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "name": "PCS2Humanity",
+      "location": "westeurope",
+      "apiVersion": "2019-10-01"
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "name": "[concat('PCS2HumanityDeployment', uniqueString(subscription().subscriptionId))]",
+      "resourceGroup": "PCS2Humanity",
+      "apiVersion": "2019-10-01",
+      "dependsOn": [
+        "PCS2Humanity"
+      ],
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": [
+            {
+              "id": "/subscriptions/c9e3aca8-c7e6-4b82-a355-c4716f8cc0c7/resourceGroups/PCS2Humanity/providers/Microsoft.Web/sites/getsas",
+              "name": "getsas",
+              "type": "Microsoft.Web/sites",
+              "kind": "functionapp",
+              "location": "West Europe",
+              "tags": {
+                "proyecto": "pcs2h"
+              },
+              "properties": {
+                "name": "getsas",
+                "state": "Running",
+                "hostNames": [
+                  "getsas.azurewebsites.net"
+                ],
+                "webSpace": "PCS2Humanity-WestEuropewebspace",
+                "selfLink": "https://waws-prod-am2-075.api.azurewebsites.windows.net:454/subscriptions/c9e3aca8-c7e6-4b82-a355-c4716f8cc0c7/webspaces/PCS2Humanity-WestEuropewebspace/sites/getsas",
+                "repositorySiteName": "getsas",
+                "owner": null,
+                "usageState": 0,
+                "enabled": true,
+                "adminEnabled": true,
+                "enabledHostNames": [
+                  "getsas.azurewebsites.net",
+                  "getsas.scm.azurewebsites.net"
+                ],
+                "siteProperties": {
+                  "metadata": null,
+                  "properties": [
+                    {
+                      "name": "LinuxFxVersion",
+                      "value": ""
+                    },
+                    {
+                      "name": "WindowsFxVersion",
+                      "value": null
+                    }
+                  ],
+                  "appSettings": null
+                },
+                "availabilityState": 0,
+                "sslCertificates": null,
+                "csrs": [],
+                "cers": null,
+                "siteMode": null,
+                "hostNameSslStates": [
+                  {
+                    "name": "getsas.azurewebsites.net",
+                    "sslState": 0,
+                    "ipBasedSslResult": null,
+                    "virtualIP": null,
+                    "thumbprint": null,
+                    "toUpdate": null,
+                    "toUpdateIpBasedSsl": null,
+                    "ipBasedSslState": 0,
+                    "hostType": 0
+                  },
+                  {
+                    "name": "getsas.scm.azurewebsites.net",
+                    "sslState": 0,
+                    "ipBasedSslResult": null,
+                    "virtualIP": null,
+                    "thumbprint": null,
+                    "toUpdate": null,
+                    "toUpdateIpBasedSsl": null,
+                    "ipBasedSslState": 0,
+                    "hostType": 1
+                  }
+                ],
+                "computeMode": null,
+                "serverFarm": null,
+                "serverFarmId": "/subscriptions/c9e3aca8-c7e6-4b82-a355-c4716f8cc0c7/resourceGroups/PCS2Humanity/providers/Microsoft.Web/serverfarms/ASP-PCS2Humanity-a398",
+                "reserved": false,
+                "isXenon": false,
+                "hyperV": false,
+                "lastModifiedTimeUtc": "2020-06-02T15:35:57.277",
+                "storageRecoveryDefaultState": "Running",
+                "contentAvailabilityState": 0,
+                "runtimeAvailabilityState": 0,
+                "siteConfig": {
+                  "numberOfWorkers": null,
+                  "defaultDocuments": null,
+                  "netFrameworkVersion": null,
+                  "phpVersion": null,
+                  "pythonVersion": null,
+                  "nodeVersion": null,
+                  "powerShellVersion": null,
+                  "linuxFxVersion": null,
+                  "windowsFxVersion": null,
+                  "requestTracingEnabled": null,
+                  "remoteDebuggingEnabled": null,
+                  "remoteDebuggingVersion": null,
+                  "httpLoggingEnabled": null,
+                  "azureMonitorLogCategories": null,
+                  "acrUseManagedIdentityCreds": false,
+                  "acrUserManagedIdentityID": null,
+                  "logsDirectorySizeLimit": null,
+                  "detailedErrorLoggingEnabled": null,
+                  "publishingUsername": null,
+                  "publishingPassword": null,
+                  "appSettings": null,
+                  "metadata": null,
+                  "connectionStrings": null,
+                  "machineKey": null,
+                  "handlerMappings": null,
+                  "documentRoot": null,
+                  "scmType": null,
+                  "use32BitWorkerProcess": null,
+                  "webSocketsEnabled": null,
+                  "alwaysOn": null,
+                  "javaVersion": null,
+                  "javaContainer": null,
+                  "javaContainerVersion": null,
+                  "appCommandLine": null,
+                  "managedPipelineMode": null,
+                  "virtualApplications": null,
+                  "winAuthAdminState": null,
+                  "winAuthTenantState": null,
+                  "customAppPoolIdentityAdminState": null,
+                  "customAppPoolIdentityTenantState": null,
+                  "runtimeADUser": null,
+                  "runtimeADUserPassword": null,
+                  "loadBalancing": null,
+                  "routingRules": null,
+                  "experiments": null,
+                  "limits": null,
+                  "autoHealEnabled": null,
+                  "autoHealRules": null,
+                  "tracingOptions": null,
+                  "vnetName": null,
+                  "cors": null,
+                  "push": null,
+                  "apiDefinition": null,
+                  "apiManagementConfig": null,
+                  "autoSwapSlotName": null,
+                  "localMySqlEnabled": null,
+                  "managedServiceIdentityId": null,
+                  "xManagedServiceIdentityId": null,
+                  "ipSecurityRestrictions": null,
+                  "scmIpSecurityRestrictions": null,
+                  "scmIpSecurityRestrictionsUseMain": null,
+                  "http20Enabled": null,
+                  "minTlsVersion": null,
+                  "ftpsState": null,
+                  "preWarmedInstanceCount": null,
+                  "healthCheckPath": null,
+                  "fileChangeAuditEnabled": null,
+                  "functionsRuntimeScaleMonitoringEnabled": null,
+                  "websiteTimeZone": null,
+                  "minimumElasticInstanceCount": 0
+                },
+                "deploymentId": "getsas",
+                "trafficManagerHostNames": null,
+                "sku": "Dynamic",
+                "scmSiteAlsoStopped": false,
+                "targetSwapSlot": null,
+                "hostingEnvironment": null,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "clientCertMode": 0,
+                "clientCertExclusionPaths": null,
+                "hostNamesDisabled": false,
+                "domainVerificationIdentifiers": null,
+                "customDomainVerificationId": "A3C25C93D65B66052975C8916F24F3D224D42723A8F701AD3BCAF5C670066521",
+                "kind": "functionapp",
+                "inboundIpAddress": "40.118.71.240",
+                "possibleInboundIpAddresses": "40.118.71.240,13.69.68.61",
+                "ftpUsername": "getsas\\$getsas",
+                "ftpsHostName": "ftps://waws-prod-am2-075.ftp.azurewebsites.windows.net/site/wwwroot",
+                "outboundIpAddresses": "40.118.68.234,40.118.69.16,40.118.69.95,40.118.64.32",
+                "possibleOutboundIpAddresses": "40.118.68.234,40.118.69.16,40.118.69.95,40.118.64.32,104.45.51.146,104.45.51.163,104.45.51.169,104.45.51.245,13.69.25.107,13.69.68.61",
+                "containerSize": 1536,
+                "dailyMemoryTimeQuota": 0,
+                "suspendedTill": null,
+                "siteDisabledReason": 0,
+                "functionExecutionUnitsCache": null,
+                "maxNumberOfWorkers": null,
+                "homeStamp": "waws-prod-am2-075",
+                "cloningInfo": null,
+                "hostingEnvironmentId": null,
+                "tags": {
+                  "proyecto": "pcs2h"
+                },
+                "resourceGroup": "PCS2Humanity",
+                "defaultHostName": "getsas.azurewebsites.net",
+                "slotSwapStatus": null,
+                "httpsOnly": false,
+                "redundancyMode": 0,
+                "inProgressOperationId": null,
+                "geoDistributions": null,
+                "privateEndpointConnections": [],
+                "buildVersion": null,
+                "targetBuildVersion": null
+              },
+              "apiVersion": "2015-05-01"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
