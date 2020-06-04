@@ -14,9 +14,7 @@ namespace getsas
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            //string responseMessage = new GetSas().Do() ;
-
-            var responseMessage = string.Empty;
+            string responseMessage = new GetSas().Do() ;
 
             return new OkObjectResult(responseMessage);
         }

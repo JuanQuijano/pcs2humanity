@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using getsas;
+﻿using getsas;
 using Xunit;
 
 namespace getsasTest
