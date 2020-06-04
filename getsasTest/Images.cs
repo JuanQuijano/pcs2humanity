@@ -25,11 +25,23 @@ namespace getsasTest
         {
             var request = TestFactory.CreateHttpRequest("", "");
             var response = await Images.Run(request, logger);
-
+            
             var result = response as OkObjectResult;
 
             Assert.Contains("?sv=", result.Value.ToString()); ;
             Assert.Contains("&sp=rl", result.Value.ToString()); ;
+        }
+
+
+        [Fact]
+        public async void Images_produce_excepcion_retorna_un_404()
+        {
+            var request = TestFactory.CreateHttpRequest("", "");
+            var response = await Images.Run(request, logger);
+
+            var result = response as NotFoundResult;
+
+            Assert.Equal(404, result.StatusCode);
         }
     }
 }
